@@ -1,0 +1,51 @@
+.navbar{
+    background: linear-gradient(90.09deg, #062909 0%, #052909 48.69%, rgba(23, 71, 11, 0.88) 99.97%);
+    height: 94px;
+    font-family: Inter;
+}
+
+    
+#title{
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    max-width: 540px;
+}
+#dropdownMenu2{
+   padding: 0px;
+   margin-left: 0.75rem;
+   
+
+}
+.dropdown-menu{
+    background-color: #062909;
+    border: none;
+    min-width: 20rem;
+    
+    
+}
+.dropdown-menu.show {
+    display: block;
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+.dropdown-item{
+    background-color: #062909;
+    color: #ffffff;
+    
+    display: inline-block;
+    font-size: 2em;
+    height: 79px;
+    width:90%;
+    padding: 0px;
+    margin-left: auto;
+}
+
+.dropdown-menu.show li :hover{
+    background-color: #86C61E;
+    height: 79px;
+    border-radius: 20px;
+}

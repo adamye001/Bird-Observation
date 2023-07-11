@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Bird Management</title>
+    <link rel="stylesheet" href="/css/birdmanagement.css" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id="dropdown">
+
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropdown-menu">
+            <li><button class="dropdown-item" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('map')" >Map</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('birdmanagement')">Data</button></li>
+        </ul>
+    </div>
+    <div class="container" id="titleb">
+        <h1 class="display-6">Brian's Bird Observation</h1>
+    </div>
+
+
+
+</nav>
+<body>
+    <div class = "title"> Bird Management</div>
+    <div class = "searchbox">
+
+
+
+
+<form id ="search"action = "/birdmanagement/search" method = "GET">
+    <input id = "search" type="text" placeholder="Search.." name="search">
+    <button id = "sbutton" type="submit">Search</button>
+    </form>
+    <button id = "add" onclick="movepage('addnewbird')">Add</button>
+    </div>
+    
+    <div class="section whiteboard">
+        <div class = "modes">
+            <button class = "mode" onclick="uncheck()">Unselect</button>
+            <form id = "modifybird" method ="GET" action="/addnewbird/modify">
+            <button class = "mode">Modify</button>
+            <button class = "mode" formaction="/birdmanagement/delete" formmethod='post'>Delete</button>
+            <p id = "info">(If you cannot find it by name, you can try to find the trip that you have recorded the bird, and forward to the bird information page from trip information page.)</p>
+            <button id = "trip" formaction="/tripmanagement">Trip Management</button>
+        </div>
+        <hr></hr>
+        <ul id = "birdlist">
+        {{#each data}}
+            <li id = "birdul">
+                <input name = "id" type="radio" id = "birdcheckbox" value = "{{this._id}}">
+                <div class = "box">
+                    <div class = "images"><img src = "../birdimage/{{this.image.filename}}"></div>
+                    <audio controls class="sound"><source src="../birdsound/{{this.sound.filename}}" type="audio/flac"><embed src="../birdsound/{{this.sound.filename}}"></audio>
+                    <div class = "name">{{this.name}}</div>
+                    <div class = "description">{{this.introduction}}</div>
+
+                </div>
+            </li>
+        {{/each}}
+        </ul>
+        </form>
+    </div>
+
+</body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Location Display</title>
+    <link rel="stylesheet" href="/css/locationdisplay.css" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id="dropdown">
+
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropdown-menu">
+            <li><button class="dropdown-items" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('map')" >Map</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('birdmanagement')">Data</button></li> 
+        </ul>
+    </div>
+    <div class="container" id="titleb">
+        <h1 class="display-6">Brian's Bird Observation</h1>
+    </div>
+</nav>
+<body>
+    <div class="dropdown" id = "timestamp">
+  <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+    Timestamp
+  </a>
+    
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    {{#each time as |time|}}
+    <li><form method="GET" action="/locationdisplay/{{time.address}}/{{time.date}}"><button type = "Submit" class="dropdown-item" href="#">{{time.date}}</button></li></form>
+    {{/each}}
+  </ul></div>
+  <div class = "container">
+<h3>Species Oberserved</h3>
+    <ul id = "birdlist">
+        {{#each bird as |bird|}}
+        <li><form method="GET" action="/birddisplay/{{bird.name}}"><button class = "birdbox">{{bird.name}}</button></form></li>
+        {{/each}}
+    </ul>
+  </div>
+  {{#with note as |note|}}
+  
+    <div class="notesec"><p>{{note.note}}</p>
+        <h1 id = "sum">Summary</h1> 
+    </div>
+    {{/with}}
+</body>

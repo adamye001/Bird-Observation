@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add New Address</title>
+
+    <link rel="stylesheet" href="/css/addnewaddress.css"/>
+  </head>
+
+  <div class = "middleinfo">
+    <div class = "box">
+      sadasd
+    </div>
+    {{#with data}}
+    <input type="text" value="{{json this}}" id="latlng" hidden>
+    {{/with}}
+    <form action = '/addnewaddress' method="POST">
+    <input type="text" value = "" id="coord"hidden>
+    <input type="text" value = "" id="lat" name = "lat" hidden>
+    <input type="text" value = "" id="lng" name = "lng"hidden>
+    <div class ="container" id = "info">
+    <h1 id = "title">Address Information:</h1>
+    <h1></h1>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" id = "address">Address:</label>
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box" name = "address"/>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" id = "address">Notes:</label>
+      <textarea class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Summary of this Address" name = "note"></textarea>
+    </div>
+    <h1></h1>
+    <h1 id = "title">Pin Information:</h1>
+    <h1></h1>
+    <h4>Select the Marker where this address belongs to</h4>
+
+    <div id="map1">
+      <div id="map">
+      
+      </div>
+      
+    </div>
+
+  </div>
+  <div class = "buttongrp">
+    <button class="buttong" id = "add" onclick = "mmarker()" type ="button">Add Marker</button>
+
+    <button class="buttong" type="submit">Finish</button>
+    
+    </div>
+  </form>
+</div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id = "dropdown">
+        
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src = "../img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id = "dropdown-menu" aria-labelledby="dropdownMenu2" id = "dropdown-menu">
+            <li><button class="dropdown-item" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('map')" >Map</button></li>
+          <li><button class="dropdown-item" type="button" onclick="movepage('birdmanagement')">Data</button></li>
+        </ul>
+      </div>
+      <div class = "container" id ="titleb"><h1 class="display-6">Brian's Bird Observation</h1> </div>
+    
+
+
+</nav>
+<body>
+  
+
+
+    
+
+
+
+</body>

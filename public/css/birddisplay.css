@@ -1,0 +1,99 @@
+.navbar{
+    background: linear-gradient(90.09deg, #062909 0%, #052909 48.69%, rgba(23, 71, 11, 0.88) 99.97%);
+    height: 94px;
+    font-family: Inter;
+}
+
+    
+#titleb{
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    max-width: 540px;
+}
+#dropdownMenu2{
+   padding: 0px;
+   margin-left: 0.75rem;
+   
+
+}
+#dropdown-menu{
+    background-color: #062909;
+    border: none;
+    min-width: 20rem;
+    
+    
+}
+#dropdown-menu.show {
+    display: block;
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+.dropdown-items{
+    background-color: #062909;
+    color: #ffffff;
+    
+    display: inline-block;
+    font-size: 2em;
+    height: 79px;
+    width:90%;
+    padding: 0px;
+    margin-left: auto;
+    border:none;
+}
+
+#dropdown-menu.show li :hover{
+    background-color: #86C61E;
+    height: 79px;
+    border-radius: 20px;
+}
+
+#dropdownMenuLink{
+    color:black;
+    border:none;
+    background-color: transparent;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+#container1{
+    margin-top: 5%;
+}
+#intro{
+    margin-top: 10%;
+}
+#birdimg{
+    right:10%;
+    position: absolute;
+    top:30%;
+    width: 35%;
+    height: auto;
+    margin-left: 1%;
+    padding-right: 1%;
+    border-right: 1px solid #BAB7B7;
+}
+p{
+    width: 50%;
+
+    word-wrap: break-word
+}
+#birdb{
+    right:17%;
+    position: absolute;
+    top:76%;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+background: #143B13;
+border-radius: 10px;
+
+color: #FFFFFF;
+}
+.sound{
+    right:15%;
+    position: absolute;
+    top:86%;
+}

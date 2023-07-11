@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/css/homepage.css" />
+</head>
+
+<body></body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id="dropdown">
+
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropdown-menu">
+            <li><button class="dropdown-item" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('map')" >Map</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('birdmanagement')">Data</button></li>
+        </ul>
+    </div>
+    <div class="container" id="titleb">
+        <h1 class="display-6">Brian's Bird Observation</h1>
+    </div>
+
+
+
+</nav>
+<div class="leftside" id="leftside">
+
+
+    <h5>Discover a New World Of Victoria Birdings...</h5>
+    <button class="viewmap" type="button" id="viewmap" onclick = "movepage('map')">
+        View Map
+    </button>
+    <button class="login" type="button" id="login" onclick = "movepage('login')">
+        Login
+    </button>
+</div>
+
+
+
+
+</body>
+
+</html>

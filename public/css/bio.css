@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar {
+    background: linear-gradient(90.09deg, #062909 0%, #052909 48.69%, rgba(23, 71, 11, 0.88) 99.97%);
+    height: 94px;
+    font-family: Inter;
+}
+
+
+#titleb {
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    max-width: 540px;
+}
+
+#dropdownMenu2 {
+    padding: 0px;
+    margin-left: 0.75rem;
+
+
+}
+
+#dropdown-menu {
+    background-color: #062909;
+    border: none;
+    min-width: 20rem;
+
+
+}
+
+#dropdown-menu.show {
+    display: block;
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+
+.dropdown-item {
+    background-color: #062909;
+    color: #ffffff;
+
+    display: inline-block;
+    font-size: 2em;
+    height: 79px;
+    width: 90%;
+    padding: 0px;
+    margin-left: auto;
+}
+
+#dropdown-menu.show li :hover {
+    background-color: #86C61E;
+    height: 79px;
+    border-radius: 20px;
+}
+
+body {
+
+    min-height: 100%;
+    background-color: #D8D5C0;
+    
+}
+
+.profile {
+    display: flex;
+    width: 50%;
+    max-width: 100%;
+    height: 70%;
+    left: 10%;
+    right: 0px;
+    top: 23%;
+    position: absolute;
+    background-color: #AEAB96;
+    border-radius: 20px;
+    
+}
+
+.showcase {
+    position: absolute;
+    /* width: 1%; */
+    height: 75%;
+    left: 80%;
+    top: 20%;
+    display: flex;
+
+}
+
+p {
+
+    word-wrap: break-word;
+    font-family: Inter;
+    font-size: 24px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-left:15px;
+    margin-top: 15px;
+    
+}
+.inner{
+    height:70%;
+    width:100%;
+    background-color: #616058;
+    bottom:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.inner2{
+    height:80%;
+    width:80%;
+    background-color: #404740;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute; 
+    top: 50%;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.inner3{
+    height:20%;
+    width:100%;
+    background-color: #616058;
+    bottom:0;
+    position: absolute;
+    border-radius: 20px;
+}
+#profile{
+    margin-left:15px;
+    margin-top: 15px;
+}

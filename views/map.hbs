@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Map</title>
+    <script src="/js/map.js"></script>
+    <link rel="stylesheet" href="/css/map.css"/>
+  </head>
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id = "dropdown">
+        
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src = "img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id = "dropdown-menu" aria-labelledby="dropdownMenu2" id = "dropdown-menu">
+            <li><button class="dropdown-item" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('map')" >Map</button></li>
+          <li><button class="dropdown-item" type="button" onclick="movepage('birdmanagement')">Data</button></li>
+        </ul>
+      </div>
+      <div class = "container" id ="titleb"><h1 class="display-6">Brian's Bird Observation</h1> </div>
+    
+
+
+</nav>
+
+
+  <body>
+    <input
+    id="pac-input"
+    class="controls"
+    type="text"
+    placeholder="Search Box"/>
+
+    <div id="map"></div>
+
+    <button id="add" class = "funtion"onclick = "movepage('addnewaddress')">Add</button>    
+    {{#with data}}
+
+    <input type="text" value="{{json this}}" id="latlng" hidden>
+    {{/with}}
+    {{#each note}}
+    <div class = "infobox" id= "{{this.latlng}}">
+     <h6>Summary</h6>    
+     <p class="card-text">{{this.note}}</p>        
+        <button id = "close" onclick = "closeall()">X</button>
+        <h6>Address:</h6>  
+        <p class="card-text">{{this.address}}</p>
+        
+        
+        <div class="dropdown" id = "datedrop">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  
+          </a>
+        
+          <ul class="dropdown-menu" id = "datemenu" aria-labelledby="dropdownMenuLink">
+            {{#each trip}}
+            <li><form method="GET" action="/locationdisplay/{{this._id}}"><button class="date" href="#">{{this.date}}</button></form></li>
+            {{/each}}
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+{{/each}}
+  </body>
+</html>

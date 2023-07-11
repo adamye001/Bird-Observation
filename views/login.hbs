@@ -1,0 +1,68 @@
+
+<html lang="en">
+<head> 
+
+    <link rel="stylesheet" href="/css/addnewaddress.css"/>
+</head> 
+      
+</html>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id = "dropdown">
+        
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src = "img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id = "dropdown-menu" aria-labelledby="dropdownMenu2" id = "dropdown-menu">
+            <li><button class="dropdown-item" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-item" type="button" onclick="movepage('map')" >Map</button></li>
+          <li><button class="dropdown-item" type="button" onclick="movepage('birdmanagement')">Data</button></li>
+        </ul>
+      </div>
+      <div class = "container" id ="titleb"><h1 class="display-6">Brian's Bird Observation</h1> </div>
+    
+
+
+</nav>
+
+
+
+
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h3 class="mb-5">Sign in</h3>
+ <form action = '/login' method="POST">
+            <div class ="form-outline mb-4">
+              <input id="typeEmailX-2" class="form-control form-control-lg" placeholder="Username" name="username" />
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg"placeholder="Password" name="password"/>
+            </div>
+        {{#each flash}}
+<p class="alert">{{this}}</p>
+{{/each}}
+            <!-- Checkbox -->
+          
+
+            <button class="btn btn-primary btn-lg btn-block" id = "loginb" type="submit">Login</button>
+          </form>
+            <hr class="my-4">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>

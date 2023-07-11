@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Bird Display</title>
+    <link rel="stylesheet" href="/css/birddisplay.css" />
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="dropdown" id="dropdown">
+
+        <a class="btn" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/img/menu_g.png"> </img>
+        </a>
+        <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenu2" id="dropdown-menu">
+            <li><button class="dropdown-items" type="button" onclick="movepage('homepage')" >Homepage</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('bio')" >Bio</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('map')" >Map</button></li>
+            <li><button class="dropdown-items" type="button" onclick="movepage('birdmanagement')">Data</button></li> 
+        </ul>
+    </div>
+    <div class="container" id="titleb">
+        <h1 class="display-6">Brian's Bird Observation</h1>
+    </div>
+</nav>
+<body>
+
+  <div class = "container" id = "container1">
+{{#with data as |data|}}
+<h3>{{data.name}}</h3>
+    <h4 id = "intro">Introduction</h4>
+    <p>{{data.introduction}}</p>
+    {{/with}}
+    {{#with image as |image|}}
+    <img src = "../birdimage/{{image.filename}}" id = "birdimg">
+    {{/with}}
+    {{#with data}}
+    <form id = "modifybird" method ="GET" action="/addnewbird/modify">
+    <input hidden value = "{{this._id}}" name = "id">
+    <button id="birdb" type = "submit"> Modify bird information</button>
+    </form>
+    {{/with}}
+    {{#with sound}}
+    <audio controls class="sound"><source src="../birdsound/{{this.filename}}" type="audio/flac"><embed src="../birdsound/{{this.filename}}"></audio>
+    {{/with}}
+  </div>
+
+</body>

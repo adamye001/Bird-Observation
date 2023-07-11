@@ -1,0 +1,204 @@
+.navbar{
+    background: linear-gradient(90.09deg, #062909 0%, #052909 48.69%, rgba(23, 71, 11, 0.88) 99.97%);
+    height: 94px;
+    font-family: Inter;
+}
+
+    
+#titleb{
+    font-size: 3em;
+    text-align: center;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    max-width: 540px;
+}
+#dropdownMenu2{
+   padding: 0px;
+   margin-left: 0.75rem;
+   
+
+}
+#dropdown-menu{
+    background-color: #062909;
+    border: none;
+    min-width: 20rem;
+    
+    
+}
+#dropdown-menu.show {
+    display: block;
+    margin-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    text-align: center;
+}
+.dropdown-item{
+    background-color: #062909;
+    color: #ffffff;
+    
+    display: inline-block;
+    font-size: 2em;
+    height: 79px;
+    width:90%;
+    padding: 0px;
+    margin-left: auto;
+}
+
+#dropdown-menu.show li :hover{
+    background-color: #86C61E;
+    height: 79px;
+    border-radius: 20px;
+}
+
+#map {
+    height: 100%;
+    width: 80%;
+    display: inline-block;
+}
+  
+  html,
+  body {
+    height: 90%;
+    margin: 0;
+    text-align: center;
+    top:30%;
+    padding: 0;
+    background-color: #D8D5C0;
+  }
+
+  #description {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  #infowindow-content .title {
+    font-weight: bold;
+  }
+  
+  #infowindow-content {
+    display: none;
+  }
+  
+  #map #infowindow-content {
+    display: inline;
+  }
+  
+  .pac-card {
+    background-color: #fff;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 0 0.5em;
+    font: 400 18px Roboto, Arial, sans-serif;
+    overflow: hidden;
+    font-family: Roboto;
+    padding: 0;
+  }
+  
+  #pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+  }
+  
+  .pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+  }
+  
+  .pac-controls label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  
+  #pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+  }
+  
+  #pac-input:focus {
+    border-color: #4d90fe;
+  }
+  
+  #title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px 12px;
+  }
+  
+  #target {
+    width: 345px;
+  }
+  
+.infobox{
+  width: 17%;
+  position: absolute;
+  display: none;
+  left: 53%;
+  top: 200px;
+  background-color: #474640;
+  color: #ffffff;
+  font-family: Inter;
+}
+#updatebtn{
+  color:  #0C6A9F;
+
+}
+
+#viewbtn{
+  color:  #0C6A9F;
+}
+  
+#datemenu{
+  background-color: #474640;
+  text-align: center;
+  transform: translate(100px, 37px) !important;
+}
+#datemenu :hover{
+  background-color: #6c757d;
+}
+
+#dropdownMenuLink{
+background-color: transparent;
+border-color: transparent;
+
+}
+#dropdownMenuLink :hover{
+  background-color: transparent;
+  border-color: none;
+  }
+.funtion{
+  position: absolute;;
+  width:10%;
+  background-color: #86C61E;
+  height: 4vh;
+  border-radius: 20px;
+}
+#update{
+  top:20%;
+}
+#view{
+  top:27%
+}
+.date{
+  background: transparent;
+  border: none;
+}
+
+#close{
+  top:0;
+  position: absolute;
+  right: 0;
+  border: none;
+  background-color: transparent;
+}
